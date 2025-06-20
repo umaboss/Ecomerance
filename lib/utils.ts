@@ -24,10 +24,6 @@ export function setToStorage(key: string, value: any) {
   }
 }
 
-export function formatPrice(price: number, currency: string = 'USD', locale: string = 'en-US') {
-  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(price);
-}
-
 export function removeFromStorage(key: string) {
   if (typeof window === 'undefined') return;
   try {
@@ -35,6 +31,10 @@ export function removeFromStorage(key: string) {
   } catch {
     // ignore
   }
+}
+
+export function formatPrice(price: number, currency: string = 'USD', locale: string = 'en-US') {
+  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(price);
 }
 
 export function formatDate(date: string) {
