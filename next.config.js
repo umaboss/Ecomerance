@@ -5,9 +5,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  experimental: {
-    appDir: false
-  }
+  // experimental: {
+  //   appDir: false
+  // }
 };
 
 module.exports = nextConfig;
